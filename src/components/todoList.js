@@ -5,7 +5,12 @@ import PropType from "prop-types";
 const TodoList = ({ todos, controllers }) => {
   const listItems = todos.map((data, index) => {
     return (
-      <TodoItem checkTodo={controllers.checkTodo} data={data} key={index} />
+      <TodoItem
+        checkTodo={controllers.checkTodo}
+        deleteTodo={controllers.deleteTodo}
+        data={data}
+        key={index}
+      />
     );
   });
   return <div className="todo_list">{listItems}</div>;

@@ -63,7 +63,9 @@ export function todoReducer(state = initialState, action) {
     case "todo/remove":
       return {
         ...state,
-        todoList: state.splice(action.payload, 1),
+        todoList: state.todoList.filter((todo) => {
+          if (todo.id != action.payload) return todo;
+        }),
       };
     default:
       return state;
