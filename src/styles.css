@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.app_layout {
+  display: flex;
+  padding: 1em;
+  justify-content: center;
+}
+
+/* Todo list*/
+.todo_list {
+  padding: 10px;
+  height: 500px;
+  overflow-y: scroll;
+}
+/* Todo item */
+.todo_item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 400px;
+  margin-bottom: 10px;
+}
+.todo_item h2 {
+  display: block;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.todo_item > .check {
+  color: #ccc;
+  text-decoration: line-through;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.form {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: flex-start;
+}
+.form > label {
+  font-weight: 700;
+  font-size: small;
+  text-align: left;
+}
+.form > input {
+  outline: none;
+  padding: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 5px;
+}
+
+.form > button {
+  padding: 5px 8px;
+  appearance: none;
+  outline: none;
+  border: 1px solid #ccc;
+  background-color: whitesmoke;
+}
